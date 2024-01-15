@@ -1,5 +1,4 @@
 use anyhow::Result;
-use integration::test_util::{prepare_circuit_capacity_checker, run_circuit_capacity_checker};
 use prover::{
     utils::init_env_and_log, zkevm::circuit::block_traces_to_witness_block, BlockTrace,
     WitnessBlock,
@@ -22,7 +21,6 @@ async fn main() {
     let setting = Setting::new();
     log::info!("mock-testnet: setting = {setting:?}");
 
-    prepare_circuit_capacity_checker();
     log::info!("mock-testnet: prepared ccc");
 
     let l2geth = l2geth::Client::new("mock-testnet", &setting.l2geth_api_url)
@@ -87,9 +85,8 @@ async fn main() {
     log::info!("mock-testnet: END");
 }
 
-fn build_block(block_traces: &[BlockTrace], batch_id: i64, chunk_id: i64) -> Result<WitnessBlock> {
-    let witness_block = block_traces_to_witness_block(block_traces)?;
-    run_circuit_capacity_checker(batch_id, chunk_id, block_traces, &witness_block);
+fn build_block(block_traces: &[BlockTrace], _batch_id: i64, _chunk_id: i64) -> Result<WitnessBlock> {
+    let witness_block = block_traces_to_witness_block(block_traces.to_vec())?;
     Ok(witness_block)
 }
 

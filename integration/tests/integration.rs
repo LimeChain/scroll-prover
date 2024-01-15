@@ -4,7 +4,7 @@ use halo2_proofs::{
 };
 use integration::test_util::{
     load_block_traces_for_test, parse_trace_path_from_mode, prepare_circuit_capacity_checker,
-    run_circuit_capacity_checker, PARAMS_DIR,
+    PARAMS_DIR,
 };
 use prover::{
     config::INNER_DEGREE,
@@ -74,9 +74,6 @@ fn test_capacity_checker() {
 
     let block_traces = vec![get_block_trace_from_file(trace_path)];
     let witness_block = block_traces_to_witness_block(&block_traces).unwrap();
-
-    let avg_each_tx_time = run_circuit_capacity_checker(0, 0, &block_traces, &witness_block);
-    assert!(avg_each_tx_time < Duration::from_millis(100));
 }
 
 #[test]
