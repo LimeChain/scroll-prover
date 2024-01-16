@@ -71,7 +71,7 @@ fn test_capacity_checker() {
     // let trace_path = "./tests/extra_traces/new.json";
 
     let block_traces = vec![get_block_trace_from_file(trace_path)];
-    let witness_block = block_traces_to_witness_block(&block_traces).unwrap();
+    let witness_block = block_traces_to_witness_block(block_traces.clone()).unwrap();
 }
 
 #[test]

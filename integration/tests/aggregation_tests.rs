@@ -48,7 +48,7 @@ fn gen_chunk_hashes_and_proofs(
 
             let proof = zkevm_prover
                 .gen_chunk_proof(ChunkTrace{
-                block_traces: block_traces,
+                block_traces: block_traces.clone(),
                 ..Default::default()
             }, Some(&i.to_string()), None, Some(output_dir))
                 .unwrap();
