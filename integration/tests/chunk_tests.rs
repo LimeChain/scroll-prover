@@ -1,9 +1,11 @@
+use ethers_core::{types::H256, utils::keccak256};
 use integration::test_util::{
     gen_and_verify_chunk_proofs, load_block_traces_for_test, ASSETS_DIR, PARAMS_DIR,
 };
 use prover::{
     utils::{chunk_trace_to_witness_block, init_env_and_log},
-    zkevm::Prover, ChunkTrace,
+    zkevm::Prover,
+    ChunkTrace,
 };
 use std::env;
 
@@ -16,10 +18,13 @@ fn test_chunk_prove_verify() {
     let block_traces = load_block_traces_for_test().1;
     log::info!("Loaded chunk trace");
 
-    let witness_block = chunk_trace_to_witness_block(ChunkTrace{
+    let witness_block = chunk_trace_to_witness_block(ChunkTrace {
         block_traces: block_traces,
-        ..Default::default()
-    }).unwrap();
+        last_applied_l1_block: Some(0),
+        prev_last_applied_l1_block: Some(0),
+        l1_block_range_hash: Some(H256(keccak256(vec![]))),
+    })
+    .unwrap();
     log::info!("Got witness block");
 
     env::set_var("CHUNK_VK_FILENAME", "vk_chunk_0.vkey");

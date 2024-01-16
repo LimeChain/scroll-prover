@@ -1,7 +1,12 @@
 use clap::Parser;
 use prover::{
     utils::{get_block_trace_from_file, init_env_and_log},
-    zkevm::Prover, ChunkTrace,
+    zkevm::Prover,
+    ChunkTrace,
+};
+use ethers_core::{
+  utils::keccak256,
+  types::H256,
 };
 use std::{env, fs, path::PathBuf, time::Instant};
 
@@ -49,10 +54,17 @@ fn main() {
 
     let now = Instant::now();
     prover
-        .gen_chunk_proof(ChunkTrace{
-            block_traces: traces,
-            ..Default::default()
-        }, Some("zkevm"), None, Some(&output_dir))
+        .gen_chunk_proof(
+            ChunkTrace {
+                block_traces: traces,
+                last_applied_l1_block: Some(0),
+                prev_last_applied_l1_block: Some(0),
+                l1_block_range_hash: Some(H256(keccak256(vec![]))),
+            },
+            Some("zkevm"),
+            None,
+            Some(&output_dir),
+        )
         .expect("cannot generate chunk snark");
     log::info!(
         "finish generating chunk snark, elapsed: {:?}",

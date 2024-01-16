@@ -1,3 +1,4 @@
+use ethers_core::{types::H256, utils::keccak256};
 use integration::test_util::{
     gen_and_verify_batch_proofs, load_block_traces_for_test, ASSETS_DIR, PARAMS_DIR,
 };
@@ -40,17 +41,27 @@ fn gen_chunk_hashes_and_proofs(
         .into_iter()
         .enumerate()
         .map(|(i, block_traces)| {
-            let witness_block = chunk_trace_to_witness_block(ChunkTrace{
+            let witness_block = chunk_trace_to_witness_block(ChunkTrace {
                 block_traces: block_traces.clone(),
-                ..Default::default()
-            }).unwrap();
+                last_applied_l1_block: Some(0),
+                prev_last_applied_l1_block: Some(0),
+                l1_block_range_hash: Some(H256(keccak256(vec![]))),
+            })
+            .unwrap();
             let chunk_hash = ChunkHash::from_witness_block(&witness_block, false);
 
             let proof = zkevm_prover
-                .gen_chunk_proof(ChunkTrace{
-                block_traces: block_traces.clone(),
-                ..Default::default()
-            }, Some(&i.to_string()), None, Some(output_dir))
+                .gen_chunk_proof(
+                    ChunkTrace {
+                        block_traces: block_traces.clone(),
+                        last_applied_l1_block: Some(0),
+                        prev_last_applied_l1_block: Some(0),
+                        l1_block_range_hash: Some(H256(keccak256(vec![]))),
+                    },
+                    Some(&i.to_string()),
+                    None,
+                    Some(output_dir),
+                )
                 .unwrap();
 
             (chunk_hash, proof)

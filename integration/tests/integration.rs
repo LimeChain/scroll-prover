@@ -12,7 +12,6 @@ use prover::{
     utils::{get_block_trace_from_file, init_env_and_log, load_params, short_git_version},
     zkevm::circuit::{block_traces_to_witness_block, SuperCircuit, TargetCircuit},
 };
-use std::time::Duration;
 use zkevm_circuits::util::SubCircuit;
 
 #[test]
@@ -71,7 +70,7 @@ fn test_capacity_checker() {
     // let trace_path = "./tests/extra_traces/new.json";
 
     let block_traces = vec![get_block_trace_from_file(trace_path)];
-    let witness_block = block_traces_to_witness_block(block_traces.clone()).unwrap();
+    block_traces_to_witness_block(block_traces.clone()).unwrap();
 }
 
 #[test]

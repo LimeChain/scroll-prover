@@ -1,8 +1,13 @@
+use ethers_core::{
+  utils::keccak256,
+  types::H256,
+};
 use integration::test_util::{load_block_traces_for_test, PARAMS_DIR};
 use prover::{
     inner::{Prover, Verifier},
     utils::init_env_and_log,
-    zkevm::circuit::SuperCircuit, ChunkTrace,
+    zkevm::circuit::SuperCircuit,
+    ChunkTrace,
 };
 
 #[cfg(feature = "prove_verify")]
@@ -19,10 +24,17 @@ fn test_inner_prove_verify() {
     log::info!("Constructed prover");
 
     let proof = prover
-        .load_or_gen_inner_proof(test_name, "inner", ChunkTrace{
+        .load_or_gen_inner_proof(
+            test_name,
+            "inner",
+            ChunkTrace {
                 block_traces: block_traces,
-                ..Default::default()
-            }, Some(&output_dir))
+                last_applied_l1_block: Some(0),
+                prev_last_applied_l1_block: Some(0),
+                l1_block_range_hash: Some(H256(keccak256(vec![]))),
+            },
+            Some(&output_dir),
+        )
         .unwrap();
     log::info!("Got inner snark");
 
