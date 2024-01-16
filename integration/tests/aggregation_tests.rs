@@ -41,7 +41,7 @@ fn gen_chunk_hashes_and_proofs(
         .enumerate()
         .map(|(i, block_traces)| {
             let witness_block = chunk_trace_to_witness_block(ChunkTrace{
-                block_traces: block_traces,
+                block_traces: block_traces.clone(),
                 ..Default::default()
             }).unwrap();
             let chunk_hash = ChunkHash::from_witness_block(&witness_block, false);
