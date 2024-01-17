@@ -1,6 +1,6 @@
 use integration::test_util::load_block_traces_for_test;
 use prover::{inner::Prover, utils::init_env_and_log, zkevm::circuit::SuperCircuit, ChunkTrace};
-use ethers_core::types::Hash;
+use ethers_core::abi::Hash;
 use std::str::FromStr;
 
 #[cfg(feature = "prove_verify")]
