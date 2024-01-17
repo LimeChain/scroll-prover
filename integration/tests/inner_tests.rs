@@ -1,7 +1,3 @@
-use ethers_core::{
-  utils::keccak256,
-  types::H256,
-};
 use integration::test_util::{load_block_traces_for_test, PARAMS_DIR};
 use prover::{
     inner::{Prover, Verifier},
@@ -29,9 +25,7 @@ fn test_inner_prove_verify() {
             "inner",
             ChunkTrace {
                 block_traces: block_traces,
-                last_applied_l1_block: Some(0),
-                prev_last_applied_l1_block: Some(0),
-                l1_block_range_hash: Some(H256(keccak256(vec![]))),
+                ..Default::default()
             },
             Some(&output_dir),
         )

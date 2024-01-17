@@ -1,4 +1,3 @@
-use ethers_core::{types::H256, utils::keccak256};
 use integration::test_util::{
     gen_and_verify_chunk_proofs, load_block_traces_for_test, ASSETS_DIR, PARAMS_DIR,
 };
@@ -20,9 +19,7 @@ fn test_chunk_prove_verify() {
 
     let witness_block = chunk_trace_to_witness_block(ChunkTrace {
         block_traces: block_traces,
-        last_applied_l1_block: Some(0),
-        prev_last_applied_l1_block: Some(0),
-        l1_block_range_hash: Some(H256(keccak256(vec![]))),
+        ..Default::default()
     })
     .unwrap();
     log::info!("Got witness block");

@@ -4,10 +4,6 @@ use prover::{
     zkevm::Prover,
     ChunkTrace,
 };
-use ethers_core::{
-  utils::keccak256,
-  types::H256,
-};
 use std::{env, fs, path::PathBuf, time::Instant};
 
 #[derive(Parser, Debug)]
@@ -57,9 +53,7 @@ fn main() {
         .gen_chunk_proof(
             ChunkTrace {
                 block_traces: traces,
-                last_applied_l1_block: Some(0),
-                prev_last_applied_l1_block: Some(0),
-                l1_block_range_hash: Some(H256(keccak256(vec![]))),
+                ..Default::default()
             },
             Some("zkevm"),
             None,
