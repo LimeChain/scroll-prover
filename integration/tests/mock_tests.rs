@@ -10,10 +10,10 @@ fn test_mock_prove() {
     let block_traces = load_block_traces_for_test().1;
     Prover::<SuperCircuit>::mock_prove_target_circuit_batch(ChunkTrace {
         block_traces: block_traces.clone(),
-        last_applied_l1_block: 32,
-        prev_last_applied_l1_block: 33,
+        last_applied_l1_block: Some(32),
+        prev_last_applied_l1_block: Some(33),
         l1_block_range_hash: Some(H256(
-            (keccak256(vec!["0xa5566b8827b9e1908989e9e6d3115950fd02deeedd291c6fba18cef10971f14f"])),
+            (keccak256(["0xa5566b8827b9e1908989e9e6d3115950fd02deeedd291c6fba18cef10971f14f"])),
         )),
     })
     .unwrap();
