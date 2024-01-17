@@ -10,7 +10,7 @@ fn test_mock_prove() {
 
     let mut ll = Vec::new();
     ll.push("0x3c8e0460c773f86d9170137735eebb0efdb8336362fe98ff0b4b82dd8dff274d".as_bytes());
-    let mm = ll.iter().map(|i| i.to_vec()).collect_vec().iter().flatten().cloned().collect_vec();
+    let mm = ll.iter().map(|i| i.to_vec()).flatten().collect::<Vec<u8>>();
 
     let block_traces = load_block_traces_for_test().1;
     Prover::<SuperCircuit>::mock_prove_target_circuit_batch(ChunkTrace {
