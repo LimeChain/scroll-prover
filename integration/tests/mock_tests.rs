@@ -1,10 +1,8 @@
-use core::slice::SlicePattern;
-
 use ethers_core::types::H256;
 use integration::test_util::load_block_traces_for_test;
 use prover::{inner::Prover, utils::init_env_and_log, zkevm::circuit::SuperCircuit, ChunkTrace};
 
-// #[cfg(feature = "prove_verify")]
+#[cfg(feature = "prove_verify")]
 #[test]
 fn test_mock_prove() {
     init_env_and_log("mock_tests");
