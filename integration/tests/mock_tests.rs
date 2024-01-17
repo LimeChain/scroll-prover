@@ -1,6 +1,6 @@
+use ethers_core::{abi::Hash, types::H256};
 use integration::test_util::load_block_traces_for_test;
 use prover::{inner::Prover, utils::init_env_and_log, zkevm::circuit::SuperCircuit, ChunkTrace};
-use ethers_core::abi::Hash;
 use std::str::FromStr;
 
 #[cfg(feature = "prove_verify")]
@@ -13,7 +13,10 @@ fn test_mock_prove() {
         block_traces: block_traces.clone(),
         last_applied_l1_block: Some(32),
         prev_last_applied_l1_block: Some(33),
-        l1_block_range_hash: Some(Hash::from_str("0x3c8e0460c773f86d9170137735eebb0efdb8336362fe98ff0b4b82dd8dff274d").unwrap()),
+        l1_block_range_hash: Some(H256(
+            Hash::from_str("0x3c8e0460c773f86d9170137735eebb0efdb8336362fe98ff0b4b82dd8dff274d")
+                .unwrap(),
+        )),
     })
     .unwrap();
 }
