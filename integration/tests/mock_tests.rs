@@ -15,7 +15,7 @@ fn test_mock_prove() {
         prev_last_applied_l1_block: Some(33),
         l1_block_range_hash: Some(H256(
             Hash::from_str("0x3c8e0460c773f86d9170137735eebb0efdb8336362fe98ff0b4b82dd8dff274d")
-                .unwrap(),
+                .unwrap().to_fixed_bytes(),
         )),
     })
     .unwrap();
