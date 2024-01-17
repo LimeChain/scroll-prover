@@ -1,3 +1,5 @@
+#![feature(slice_pattern)]
+
 use core::slice::SlicePattern;
 
 use ethers_core::{utils::keccak256, types::H256};
