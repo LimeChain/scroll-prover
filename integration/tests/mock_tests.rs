@@ -8,7 +8,7 @@ use std::str::FromStr;
 fn test_mock_prove() {
     init_env_and_log("mock_tests");
 
-    let h256 = H256::from_str(hex_str).expect("Invalid hex string");
+    let h256 = H256::from_str("3c8e0460c773f86d9170137735eebb0efdb8336362fe98ff0b4b82dd8dff274d").expect("Invalid hex string");
 
     println!("{:?}", h256);
 
