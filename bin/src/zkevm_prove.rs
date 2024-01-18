@@ -2,6 +2,7 @@ use clap::Parser;
 use prover::{
     utils::{get_block_trace_from_file, init_env_and_log},
     zkevm::Prover,
+    ChunkTrace,
 };
 use std::{env, fs, path::PathBuf, time::Instant};
 
@@ -49,7 +50,15 @@ fn main() {
 
     let now = Instant::now();
     prover
-        .gen_chunk_proof(traces, Some("zkevm"), None, Some(&output_dir))
+        .gen_chunk_proof(
+            ChunkTrace {
+                block_traces: traces,
+                ..Default::default()
+            },
+            Some("zkevm"),
+            None,
+            Some(&output_dir),
+        )
         .expect("cannot generate chunk snark");
     log::info!(
         "finish generating chunk snark, elapsed: {:?}",
