@@ -4,6 +4,7 @@ use integration::test_util::{
 use prover::{
     utils::{chunk_trace_to_witness_block, init_env_and_log},
     zkevm::Prover,
+    ChunkTrace,
 };
 use std::env;
 
@@ -13,11 +14,14 @@ fn test_chunk_prove_verify() {
     let output_dir = init_env_and_log("chunk_tests");
     log::info!("Initialized ENV and created output-dir {output_dir}");
 
-    let chunk_trace = load_block_traces_for_test().1;
+    let block_traces = load_block_traces_for_test().1;
     log::info!("Loaded chunk trace");
 
-    let witness_block = chunk_trace_to_witness_block(chunk_trace).unwrap();
-    log::info!("Got witness block");
+    let witness_block = chunk_trace_to_witness_block(ChunkTrace {
+        block_traces: block_traces,
+        ..Default::default()
+    })
+    .unwrap();
 
     env::set_var("CHUNK_VK_FILENAME", "vk_chunk_0.vkey");
     let mut zkevm_prover = Prover::from_dirs(PARAMS_DIR, ASSETS_DIR);
