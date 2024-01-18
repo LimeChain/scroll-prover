@@ -4,7 +4,7 @@ use integration::test_util::{
 use prover::{
     aggregator::Prover,
     utils::{chunk_trace_to_witness_block, init_env_and_log},
-    zkevm, ChunkHash, ChunkProof,
+    zkevm, ChunkHash, ChunkProof, ChunkTrace,
 };
 use std::env;
 
@@ -39,12 +39,24 @@ fn gen_chunk_hashes_and_proofs(
     let chunk_hashes_proofs = chunk_traces
         .into_iter()
         .enumerate()
-        .map(|(i, chunk_trace)| {
-            let witness_block = chunk_trace_to_witness_block(chunk_trace.clone()).unwrap();
+        .map(|(i, block_traces)| {
+            let witness_block = chunk_trace_to_witness_block(ChunkTrace {
+                block_traces: block_traces.clone(),
+                ..Default::default()
+            })
+            .unwrap();
             let chunk_hash = ChunkHash::from_witness_block(&witness_block, false);
 
             let proof = zkevm_prover
-                .gen_chunk_proof(chunk_trace, Some(&i.to_string()), None, Some(output_dir))
+                .gen_chunk_proof(
+                    ChunkTrace {
+                        block_traces: block_traces.clone(),
+                        ..Default::default()
+                    },
+                    Some(&i.to_string()),
+                    None,
+                    Some(output_dir),
+                )
                 .unwrap();
 
             (chunk_hash, proof)

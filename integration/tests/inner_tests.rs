@@ -3,6 +3,7 @@ use prover::{
     inner::{Prover, Verifier},
     utils::init_env_and_log,
     zkevm::circuit::SuperCircuit,
+    ChunkTrace,
 };
 
 #[cfg(feature = "prove_verify")]
@@ -12,14 +13,22 @@ fn test_inner_prove_verify() {
     let output_dir = init_env_and_log(test_name);
     log::info!("Initialized ENV and created output-dir {output_dir}");
 
-    let chunk_trace = load_block_traces_for_test().1;
+    let block_traces = load_block_traces_for_test().1;
     log::info!("Loaded chunk trace");
 
     let mut prover = Prover::<SuperCircuit>::from_params_dir(PARAMS_DIR);
     log::info!("Constructed prover");
 
     let proof = prover
-        .load_or_gen_inner_proof(test_name, "inner", chunk_trace, Some(&output_dir))
+        .load_or_gen_inner_proof(
+            test_name,
+            "inner",
+            ChunkTrace {
+                block_traces: block_traces,
+                ..Default::default()
+            },
+            Some(&output_dir),
+        )
         .unwrap();
     log::info!("Got inner snark");
 

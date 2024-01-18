@@ -8011,6 +8011,8 @@
       }
     ],
     "withdraw_trie_root": "0x20cae976896ee7f4e4d031cb49dbd7fe75ccb8f842c1537f9e77e6cda93bbd9e",
-    "startL1QueueIndex": 1658
+    "startL1QueueIndex": 1658,
+    "lastAppliedL1Block": 0,
+    "l1BlockHashes": []
   }
 }
