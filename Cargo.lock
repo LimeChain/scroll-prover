@@ -31,7 +31,7 @@ dependencies = [
 [[package]]
 name = "aggregator"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "ark-std",
  "env_logger",
@@ -338,7 +338,7 @@ checksum = "0d261e256854913907f67ed06efbc3338dfe6179796deefc1ff763fc1aee5535"
 [[package]]
 name = "bus-mapping"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "eth-types",
  "ethers-core 2.0.7",
@@ -998,7 +998,7 @@ dependencies = [
 [[package]]
 name = "eth-types"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "ethers-core 2.0.7",
  "ethers-signers",
@@ -1097,7 +1097,7 @@ dependencies = [
 [[package]]
 name = "ethers-core"
 version = "2.0.7"
-source = "git+https://github.com/scroll-tech/ethers-rs.git?branch=v2.0.7#e32dfd62e7cdec31160b91c5a646883594a586ba"
+source = "git+https://github.com/LimeChain/scroll-ethers-rs.git?branch=LimeChain/l1-block-hashes-poc#40e9bf536667c29971bb6bea79590f13a3f670df"
 dependencies = [
  "arrayvec",
  "bytes",
@@ -1216,7 +1216,7 @@ dependencies = [
 [[package]]
 name = "external-tracer"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "eth-types",
  "geth-utils",
@@ -1396,7 +1396,7 @@ dependencies = [
 [[package]]
 name = "gadgets"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "eth-types",
  "halo2_proofs",
@@ -1418,7 +1418,7 @@ dependencies = [
 [[package]]
 name = "geth-utils"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "env_logger",
  "gobuild",
@@ -2067,7 +2067,7 @@ dependencies = [
 [[package]]
 name = "keccak256"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "env_logger",
  "eth-types",
@@ -2220,9 +2220,10 @@ dependencies = [
 [[package]]
 name = "mock"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "eth-types",
+ "ethabi",
  "ethers-core 2.0.7",
  "ethers-signers",
  "external-tracer",
@@ -2235,7 +2236,7 @@ dependencies = [
 [[package]]
 name = "mpt-zktrie"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "eth-types",
  "halo2-mpt-circuits",
@@ -2706,7 +2707,7 @@ dependencies = [
 [[package]]
 name = "prover"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "aggregator",
  "anyhow",
@@ -4477,13 +4478,14 @@ checksum = "2a0956f1ba7c7909bfb66c2e9e4124ab6f6482560f6628b5aaeba39207c9aad9"
 [[package]]
 name = "zkevm-circuits"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=limechain-test#134514f2b21e434a0902c137d58993a762a567dc"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#ad506becf70a51e47b4fca9c472668f845f5c567"
 dependencies = [
  "array-init",
  "bus-mapping",
  "either",
  "env_logger",
  "eth-types",
+ "ethabi",
  "ethers-core 2.0.7",
  "ethers-signers",
  "ff 0.13.0",
