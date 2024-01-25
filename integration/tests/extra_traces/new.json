@@ -3178,7 +3178,7 @@
   ],
   "withdraw_trie_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "startL1QueueIndex": 0,
-  "l1BlockHashes": [
+  "l1_block_hashes": [
     "0xa5566b8827b9e1908989e9e6d3115950fd02deeedd291c6fba18cef10971f14f"
   ]
 }
