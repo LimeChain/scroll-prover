@@ -1954,6 +1954,7 @@ name = "integration"
 version = "0.10.0"
 dependencies = [
  "anyhow",
+ "ethers-core 2.0.7",
  "glob",
  "halo2_proofs",
  "itertools 0.10.5",
