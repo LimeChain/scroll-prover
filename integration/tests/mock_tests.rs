@@ -13,7 +13,7 @@ fn test_mock_prove() {
         block_traces: block_traces.clone(),
         last_applied_l1_block: Some(33),
         prev_last_applied_l1_block: Some(32),
-        l1_block_range_hash: Some(Hash::from_str("90d8dd7cdea5fadd7b10c681f5e5b520772b4b843705532465f896049d48b058").unwrap()),
+        l1_block_range_hash: Some(Hash::from_str("0x90d8dd7cdea5fadd7b10c681f5e5b520772b4b843705532465f896049d48b058").unwrap()),
     })
     .unwrap();
 }
