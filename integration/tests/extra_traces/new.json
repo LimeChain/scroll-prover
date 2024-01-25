@@ -27,6 +27,7 @@
     "nonce": "0x0000000000000000",
     "baseFeePerGas": null,
     "withdrawalsRoot": null,
+    "lastAppliedL1Block": "0x21",
     "hash": "0x693707c8d52219006e66e4ce13203125f3bd4ef76bd851b2cac5c1efa364583a"
   },
   "transactions": [
@@ -3179,6 +3180,5 @@
   "startL1QueueIndex": 0,
   "l1BlockHashes": [
     "0xa5566b8827b9e1908989e9e6d3115950fd02deeedd291c6fba18cef10971f14f"
-  ],
-  "lastAppliedL1Block": "0x21"
+  ]
 }
