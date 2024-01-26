@@ -119,6 +119,7 @@ fn ccc_block_tx_by_tx(checker: &mut CircuitCapacityChecker, block_idx: usize, bl
             start_l1_queue_index: block.start_l1_queue_index,
             tx_storage_trace: vec![], // not used
             l1_block_hashes: block.l1_block_hashes.clone(),
+            last_applied_l1_block: block.last_applied_l1_block,
         };
         log::debug!("calling estimate_circuit_capacity");
         let results = checker.estimate_circuit_capacity(tx_trace).unwrap();

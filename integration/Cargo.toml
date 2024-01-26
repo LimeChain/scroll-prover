@@ -5,7 +5,7 @@ edition.workspace = true
 license.workspace = true
 
 [dependencies]
-ethers-core = { git = "https://github.com/LimeChain/scroll-ethers-rs.git", branch = "LimeChain/l1-block-hashes-poc" }
+ethers-core = { git = "https://github.com/LimeChain/scroll-ethers-rs.git", branch = "test1" }
 anyhow.workspace = true
 glob.workspace = true
 itertools.workspace = true
