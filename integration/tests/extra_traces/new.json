@@ -349,6 +349,6 @@
   ],
   "withdraw_trie_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "startL1QueueIndex": 0,
-  "lastAppliedL1Block": 33,
+  "lastAppliedL1Block": 0,
   "l1BlockHashes": null
 }
