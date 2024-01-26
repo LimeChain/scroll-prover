@@ -12,7 +12,8 @@ license = "MIT OR Apache-2.0"
 [workspace.dependencies]
 anyhow = "1.0"
 clap = { version = "3.1", features = ["derive"] }
-ethers-providers = "1.0"
+ethers-core = "=2.0.7"
+ethers-providers = "=2.0.7"
 glob = "0.3"
 itertools = "0.10"
 log = "0.4"
@@ -33,6 +34,7 @@ integration = { path = "integration" }
 
 [patch.crates-io]
 ethers-core = { git = "https://github.com/LimeChain/scroll-ethers-rs.git", branch = "LimeChain/l1-block-hashes-poc" }
+ethers-providers= { git = "https://github.com/LimeChain/scroll-ethers-rs.git", branch = "LimeChain/l1-block-hashes-poc" }
 [patch."https://github.com/privacy-scaling-explorations/halo2.git"]
 halo2_proofs = { git = "https://github.com/scroll-tech/halo2.git", branch = "v1.0" }
 [patch."https://github.com/privacy-scaling-explorations/poseidon.git"]
