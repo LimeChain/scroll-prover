@@ -24,8 +24,10 @@ fn test_inner_prove_verify() {
             test_name,
             "inner",
             ChunkTrace {
-                block_traces: block_traces,
-                ..Default::default()
+                block_traces: block_traces.clone(),
+                last_applied_l1_block: Some(167),
+                prev_last_applied_l1_block: Some(166),
+                l1_block_range_hash: Some(Hash::from_str("0xb847826b8109c7103096455b71879450d0e1092676fba38b55b44123426601f0").unwrap()),
             },
             Some(&output_dir),
         )
