@@ -5,6 +5,8 @@ use prover::{
     zkevm::circuit::SuperCircuit,
     ChunkTrace,
 };
+use ethers_core::abi::Hash;
+use std::str::FromStr;
 
 #[cfg(feature = "prove_verify")]
 #[test]

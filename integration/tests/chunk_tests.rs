@@ -6,6 +6,8 @@ use prover::{
     zkevm::Prover,
     ChunkTrace,
 };
+use ethers_core::abi::Hash;
+use std::str::FromStr;
 use std::env;
 
 #[cfg(feature = "prove_verify")]
