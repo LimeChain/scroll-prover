@@ -31,7 +31,7 @@ dependencies = [
 [[package]]
 name = "aggregator"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "ark-std 0.3.0",
  "env_logger",
@@ -469,7 +469,7 @@ checksum = "7f30e7476521f6f8af1a1c4c0b8cc94f0bee37d91763d0ca2665f299b6cd8aec"
 [[package]]
 name = "bus-mapping"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "eth-types",
  "ethers-core",
@@ -1070,7 +1070,7 @@ dependencies = [
 [[package]]
 name = "eth-types"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "ethers-core",
  "ethers-signers",
@@ -1143,7 +1143,7 @@ dependencies = [
 [[package]]
 name = "ethers-core"
 version = "2.0.7"
-source = "git+https://github.com/LimeChain/scroll-ethers-rs.git?branch=test1#45f0f98012e4271e6217ba72668034faa48337d2"
+source = "git+https://github.com/LimeChain/scroll-ethers-rs.git?branch=test1#7286271dc4bd798d8eab74b36bbcd4310d253940"
 dependencies = [
  "arrayvec",
  "bytes",
@@ -1169,7 +1169,7 @@ dependencies = [
 [[package]]
 name = "ethers-providers"
 version = "2.0.7"
-source = "git+https://github.com/LimeChain/scroll-ethers-rs.git?branch=test1#45f0f98012e4271e6217ba72668034faa48337d2"
+source = "git+https://github.com/LimeChain/scroll-ethers-rs.git?branch=test1#7286271dc4bd798d8eab74b36bbcd4310d253940"
 dependencies = [
  "async-trait",
  "auto_impl",
@@ -1224,7 +1224,7 @@ dependencies = [
 [[package]]
 name = "external-tracer"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "eth-types",
  "geth-utils",
@@ -1415,7 +1415,7 @@ dependencies = [
 [[package]]
 name = "gadgets"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "eth-types",
  "halo2_proofs",
@@ -1437,7 +1437,7 @@ dependencies = [
 [[package]]
 name = "geth-utils"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "env_logger",
  "gobuild",
@@ -1585,7 +1585,7 @@ dependencies = [
 [[package]]
 name = "halo2-gate-generator"
 version = "0.1.0"
-source = "git+https://github.com/scroll-tech/halo2gategen#8ccf462e1eff4ed0e602d7ba19771b2c53dee0e3"
+source = "git+https://github.com/scroll-tech/halo2gategen?branch=scroll#2fa5c39aa67d0f97d660f37954daa9e897d0a4c1"
 dependencies = [
  "halo2_proofs",
  "lazy_static",
@@ -2074,7 +2074,7 @@ dependencies = [
 [[package]]
 name = "keccak256"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "env_logger",
  "eth-types",
@@ -2189,7 +2189,7 @@ dependencies = [
 [[package]]
 name = "misc-precompiled-circuit"
 version = "0.1.0"
-source = "git+https://github.com/scroll-tech/misc-precompiled-circuit.git?branch=main#f46cf8fd0072e5531315739b20b5248f4bd2caac"
+source = "git+https://github.com/scroll-tech/misc-precompiled-circuit.git?branch=main#dcb5018d84e8a9adec59cd33f5348a3971cec194"
 dependencies = [
  "halo2-gate-generator",
  "halo2_proofs",
@@ -2205,7 +2205,7 @@ dependencies = [
 [[package]]
 name = "mock"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "eth-types",
  "ethabi",
@@ -2221,7 +2221,7 @@ dependencies = [
 [[package]]
 name = "mpt-zktrie"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "eth-types",
  "halo2-mpt-circuits",
@@ -2689,7 +2689,7 @@ dependencies = [
 [[package]]
 name = "prover"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "aggregator",
  "anyhow",
@@ -4447,7 +4447,7 @@ dependencies = [
 [[package]]
 name = "zkevm-circuits"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#f84eb0273dae48d0ecf801f32bf5eb196ba32d3f"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=test4#d96c4b2cf3c71b06fa4da487630dc7d95fbfb7e3"
 dependencies = [
  "anyhow",
  "array-init",

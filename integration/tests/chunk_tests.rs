@@ -21,9 +21,9 @@ fn test_chunk_prove_verify() {
 
     let witness_block = chunk_trace_to_witness_block(ChunkTrace {
         block_traces: block_traces.clone(),
-        last_applied_l1_block: Some(167),
-        prev_last_applied_l1_block: Some(166),
-        l1_block_range_hash: Some(Hash::from_str("0xb847826b8109c7103096455b71879450d0e1092676fba38b55b44123426601f0").unwrap()),
+        last_applied_l1_block: Some(46),
+        prev_last_applied_l1_block: Some(45),
+        l1_block_range_hash: Some(Hash::from_str("0xbf6bf5ffabb8af597c2c704c028daa2bd52bb076062961fc912c52c20efc4dad").unwrap()),
     })
     .unwrap();
 
