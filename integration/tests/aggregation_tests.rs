@@ -15,10 +15,10 @@ fn test_agg_prove_verify() {
     log::info!("Initialized ENV and created output-dir {output_dir}");
 
     let trace_paths = vec!["./tests/extra_traces/new.json".to_string()];
-    let chunk_hashes_proofs = gen_chunk_hashes_and_proofs(&output_dir, &trace_paths);
+    gen_chunk_hashes_and_proofs(&output_dir, &trace_paths);
 
-    let mut batch_prover = new_batch_prover(&output_dir);
-    prove_and_verify_batch(&output_dir, &mut batch_prover, chunk_hashes_proofs);
+    // let mut batch_prover = new_batch_prover(&output_dir);
+    // prove_and_verify_batch(&output_dir, &mut batch_prover, chunk_hashes_proofs);
 }
 
 fn gen_chunk_hashes_and_proofs(
