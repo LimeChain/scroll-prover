@@ -31,7 +31,7 @@ dependencies = [
 [[package]]
 name = "aggregator"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "ark-std",
  "env_logger",
@@ -338,7 +338,7 @@ checksum = "0d261e256854913907f67ed06efbc3338dfe6179796deefc1ff763fc1aee5535"
 [[package]]
 name = "bus-mapping"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "eth-types",
  "ethers-core",
@@ -997,7 +997,7 @@ dependencies = [
 [[package]]
 name = "eth-types"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "ethers-core",
  "ethers-signers",
@@ -1151,7 +1151,7 @@ dependencies = [
 [[package]]
 name = "external-tracer"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "eth-types",
  "geth-utils",
@@ -1331,7 +1331,7 @@ dependencies = [
 [[package]]
 name = "gadgets"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "eth-types",
  "halo2_proofs",
@@ -1353,7 +1353,7 @@ dependencies = [
 [[package]]
 name = "geth-utils"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "env_logger",
  "gobuild",
@@ -1503,7 +1503,7 @@ dependencies = [
 [[package]]
 name = "halo2-gate-generator"
 version = "0.1.0"
-source = "git+https://github.com/scroll-tech/halo2gategen.git#8ccf462e1eff4ed0e602d7ba19771b2c53dee0e3"
+source = "git+https://github.com/scroll-tech/halo2gategen?branch=scroll#2fa5c39aa67d0f97d660f37954daa9e897d0a4c1"
 dependencies = [
  "halo2_proofs",
  "lazy_static",
@@ -1997,7 +1997,7 @@ dependencies = [
 [[package]]
 name = "keccak256"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "env_logger",
  "eth-types",
@@ -2134,7 +2134,7 @@ dependencies = [
 [[package]]
 name = "misc-precompiled-circuit"
 version = "0.1.0"
-source = "git+https://github.com/scroll-tech/misc-precompiled-circuit.git?branch=main#f46cf8fd0072e5531315739b20b5248f4bd2caac"
+source = "git+https://github.com/scroll-tech/misc-precompiled-circuit.git?branch=main#dcb5018d84e8a9adec59cd33f5348a3971cec194"
 dependencies = [
  "halo2-gate-generator",
  "halo2_proofs",
@@ -2150,7 +2150,7 @@ dependencies = [
 [[package]]
 name = "mock"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "eth-types",
  "ethabi",
@@ -2166,7 +2166,7 @@ dependencies = [
 [[package]]
 name = "mpt-zktrie"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "eth-types",
  "halo2-mpt-circuits",
@@ -2602,7 +2602,7 @@ dependencies = [
 [[package]]
 name = "prover"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "aggregator",
  "anyhow",
@@ -4267,7 +4267,7 @@ checksum = "2a0956f1ba7c7909bfb66c2e9e4124ab6f6482560f6628b5aaeba39207c9aad9"
 [[package]]
 name = "zkevm-circuits"
 version = "0.1.0"
-source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#5d3b5cab73637e33562d85ee078178926ce3c5ed"
+source = "git+https://github.com/LimeChain/scroll-zkevm-circuits?branch=LimeChain/wip-block-hashes-poc#b2cbea0c77e0c2b201a404ef4aae80c526cd354b"
 dependencies = [
  "array-init",
  "bus-mapping",

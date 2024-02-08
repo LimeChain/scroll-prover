@@ -10,7 +10,7 @@ use prover::{
     config::INNER_DEGREE,
     io::serialize_vk,
     utils::{get_block_trace_from_file, init_env_and_log, load_params, short_git_version},
-    zkevm::circuit::{block_traces_to_witness_block, SuperCircuit, TargetCircuit},
+    zkevm::circuit::{block_traces_to_witness_block, SuperCircuit, TargetCircuit}, ChunkTrace,
 };
 use std::time::Duration;
 use zkevm_circuits::util::SubCircuit;
@@ -86,7 +86,10 @@ fn estimate_circuit_rows() {
     let (_, block_trace) = load_block_traces_for_test();
 
     log::info!("estimating used rows for batch");
-    let rows = SuperCircuit::estimate_rows(block_trace);
+    let rows = SuperCircuit::estimate_rows(ChunkTrace {
+        block_traces: block_trace.clone(),
+        ..Default::default()
+    });
     log::info!("super circuit: {:?}", rows);
 }
 
