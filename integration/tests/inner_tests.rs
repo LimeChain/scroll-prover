@@ -5,6 +5,8 @@ use prover::{
     zkevm::circuit::SuperCircuit,
     ChunkTrace,
 };
+use std::str::FromStr;
+use ethers_core::abi::Hash;
 
 #[cfg(feature = "prove_verify")]
 #[test]
@@ -25,7 +27,9 @@ fn test_inner_prove_verify() {
             "inner",
             ChunkTrace {
                 block_traces: block_traces,
-                ..Default::default()
+                last_applied_l1_block: Some(46),
+                prev_last_applied_l1_block: Some(45),
+                l1_block_range_hash: Some(Hash::from_str("0xbf6bf5ffabb8af597c2c704c028daa2bd52bb076062961fc912c52c20efc4dad").unwrap()),
             },
             Some(&output_dir),
         )
